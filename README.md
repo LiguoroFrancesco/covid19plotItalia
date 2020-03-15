@@ -1,6 +1,7 @@
 # Grafici andamento COVID19 costruiti a partire dai dati ufficiali forniti dalla Protezione Civile 
-covid19plot Francesco Liguoro
+Grafici costruiti con l'uso di uno script MATLAB -> covid19plot.m
 
+- Francesco Liguoro
 (fonte: https://github.com/pcm-dpc/COVID-19)
 
 ![](Grafici/Nazionale.bmp)
