@@ -28,7 +28,7 @@ plot (nazionale_data, nazionale_terapiaIntensiva,'-o')
 plot (nazionale_data, nazionale_dimessiGuariti,'-o')
 legend("Totale attualmente positivi","Totale Ospedalizzati","Terapia Intensiva","Dimessi guariti",'Location','northwest')
 title ('Andamento integrale Nazionale')
-%xlabel('Tempo [Giorni]') 
+xlabel('Tempo [Giorni]') 
 ylabel('Unità')
 grid on
 grid minor
@@ -57,10 +57,10 @@ ylabel('Unità')
 grid on
 grid minor
 
-saveas(fig,'Nazionale.bmp');
+saveas(fig,'./Grafici/Nazionale.bmp');
 pause (1)
-saveas(fig1,'LogNazionale.bmp');
-saveas(fig2,'GioNazionale.bmp');
+saveas(fig1,'./Grafici/LogNazionale.bmp');
+saveas(fig2,'./Grafici/GioNazionale.bmp');
 
 
 % ======== CASI REGIONALI=========
@@ -121,7 +121,7 @@ for i = 1:dim
     legend("Totale Ospedalizzati","Terapia Intensiva","Dimessi guariti","Deceduti",'Location','northwest')
     hold off
     
-    saveas(fig1,sprintf('%s.bmp', target));
+    saveas(fig1,sprintf('./Grafici/%s.bmp', target));
     pause (1);
-    saveas(fig2,sprintf('ospedalizzati%s.bmp', target));
+    saveas(fig2,sprintf('./Grafici/ospedalizzati%s.bmp', target));
 end
