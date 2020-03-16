@@ -1,4 +1,4 @@
-# Grafici andamento COVID19 costruiti a partire dai dati ufficiali forniti dalla Protezione Civile 
+# Grafici andamento italiano COVID19 costruiti a partire dai dati ufficiali forniti dalla Protezione Civile 
 Grafici costruiti con l'uso di uno script MATLAB -> plotCOVID.m
 
 - Francesco Liguoro
@@ -33,3 +33,5 @@ Grafici costruiti con l'uso di uno script MATLAB -> plotCOVID.m
 ![](Grafici/ospedalizzatiSicilia.png)
 ![](Grafici/Sardegna.png)
 ![](Grafici/ospedalizzatiSardegna.png)
+
+covid19 covid19italia
