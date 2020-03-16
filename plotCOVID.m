@@ -57,10 +57,10 @@ ylabel('Unità')
 grid on
 grid minor
 
-saveas(fig,'./Grafici/Nazionale.bmp');
+saveas(fig,'./Grafici/Nazionale.png');
 pause (1)
-saveas(fig1,'./Grafici/LogNazionale.bmp');
-saveas(fig2,'./Grafici/GioNazionale.bmp');
+saveas(fig1,'./Grafici/LogNazionale.png');
+saveas(fig2,'./Grafici/GioNazionale.png');
 
 
 % ======== CASI REGIONALI=========
@@ -121,7 +121,7 @@ for i = 1:dim
     legend("Totale Ospedalizzati","Terapia Intensiva","Dimessi guariti","Deceduti",'Location','northwest')
     hold off
     
-    saveas(fig1,sprintf('./Grafici/%s.bmp', target));
+    saveas(fig1,sprintf('./Grafici/%s.png', target));
     pause (1);
-    saveas(fig2,sprintf('./Grafici/ospedalizzati%s.bmp', target));
+    saveas(fig2,sprintf('./Grafici/ospedalizzati%s.png', target));
 end
