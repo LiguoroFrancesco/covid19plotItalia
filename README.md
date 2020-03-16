@@ -1,5 +1,5 @@
 # Grafici andamento COVID19 costruiti a partire dai dati ufficiali forniti dalla Protezione Civile 
-Grafici costruiti con l'uso di uno script MATLAB -> covid19plot.m
+Grafici costruiti con l'uso di uno script MATLAB -> plotCOVID.m
 
 - Francesco Liguoro
 (fonte: https://github.com/pcm-dpc/COVID-19)
