@@ -54,6 +54,7 @@ plot (nazionale_data, nazionale_nuoviPos,'-o')
 title ('Andamento giornaliero Nazionale')
 xlabel('Tempo [Giorni]') 
 ylabel('Unità')
+legend("Totale nuovi positivi",'Location','northwest')
 grid on
 grid minor
 
@@ -96,6 +97,7 @@ for i = 1:dim
     title (sprintf('Andamento Integrale %s ', target))
     %xlabel('Tempo [Giorni]')
     ylabel('Unità')
+    legend("Totale attualmente positivi",'Location','northwest')
     grid on
     grid minor
     
@@ -104,6 +106,7 @@ for i = 1:dim
     title (sprintf('Andamento Giornaliero %s ', target))
     xlabel('Tempo [Giorni]')
     ylabel('Unità')
+    legend("Totale nuovi positivi",'Location','northwest')
     grid on
     grid minor
     
