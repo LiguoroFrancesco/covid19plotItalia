@@ -94,7 +94,7 @@ for i = 1:dim
     fig1 = figure;
     subplot (2,1,1)
     plot (regione_data,regione_totcasi,'-o')
-    title (sprintf('Andamento Integrale %s (%+i)', target, regione_nuoviPos(end)))
+    title (sprintf('Andamento Integrale %s ', target))
     %xlabel('Tempo [Giorni]')
     ylabel('Unità')
     legend("Totale attualmente positivi",'Location','northwest')
@@ -116,7 +116,7 @@ for i = 1:dim
     plot (regione_data, regione_terapiaIntensiva,'-o')
     plot (regione_data, regione_dimessiGuariti,'-o')
     plot (regione_data, regione_deceduti,'-o')
-    title (sprintf('Ospedalizzati %s (%+i) ', target, (regione_totOspedalizzati(end) - regione_totOspedalizzati(end-1))))
+    title (sprintf('Ospedalizzati %s ', target))
     xlabel('Tempo [Giorni]')
     ylabel('Unità')
     grid on
