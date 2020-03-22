@@ -27,7 +27,7 @@ plot (nazionale_data, nazionale_totOspedalizzati,'-o')
 plot (nazionale_data, nazionale_terapiaIntensiva,'-o')
 plot (nazionale_data, nazionale_dimessiGuariti,'-o')
 legend("Totale attualmente positivi","Totale Ospedalizzati","Terapia Intensiva","Dimessi guariti",'Location','northwest')
-title (sprintf('Andamento integrale Nazionale (%+i)', nazionale_nuoviPos(end)))
+title (sprintf('Andamento integrale Nazionale (%i)', nazionale_totcasi(end)))
 xlabel('Tempo [Giorni]') 
 ylabel('Unità')
 grid on
@@ -51,7 +51,7 @@ hold off
 fig2 = figure;
 
 plot (nazionale_data, nazionale_nuoviPos,'-o')
-title ('Andamento giornaliero Nazionale')
+title (sprintf('Andamento giornaliero Nazionale (%+i)', nazionale_nuoviPos(end)))
 xlabel('Tempo [Giorni]') 
 ylabel('Unità')
 legend("Totale nuovi positivi",'Location','northwest')
@@ -94,7 +94,7 @@ for i = 1:dim
     fig1 = figure;
     subplot (2,1,1)
     plot (regione_data,regione_totcasi,'-o')
-    title (sprintf('Andamento Integrale %s (%+i)', target, regione_nuoviPos(end)))
+    title (sprintf('Andamento Integrale %s (%i)', target, regione_totcasi(end)))
     %xlabel('Tempo [Giorni]')
     ylabel('Unità')
     legend("Totale attualmente positivi",'Location','northwest')
@@ -103,7 +103,7 @@ for i = 1:dim
     
     subplot (2,1,2)
     plot (regione_data,regione_nuoviPos,'-o')
-    title (sprintf('Andamento Giornaliero %s ', target))
+    title (sprintf('Andamento Giornaliero %s (%+i)', target, regione_nuoviPos(end)))
     xlabel('Tempo [Giorni]')
     ylabel('Unità')
     legend("Totale nuovi positivi",'Location','northwest')
@@ -116,7 +116,7 @@ for i = 1:dim
     plot (regione_data, regione_terapiaIntensiva,'-o')
     plot (regione_data, regione_dimessiGuariti,'-o')
     plot (regione_data, regione_deceduti,'-o')
-    title (sprintf('Ospedalizzati %s (%+i) ', target, (regione_totOspedalizzati(end) - regione_totOspedalizzati(end-1))))
+    title (sprintf('Ospedalizzati %s %i (%+i) ', target, regione_totOspedalizzati(end), (regione_totOspedalizzati(end) - regione_totOspedalizzati(end-1))))
     xlabel('Tempo [Giorni]')
     ylabel('Unità')
     grid on
