@@ -13,8 +13,8 @@ sizeNazionale = sizeNazionale(1);
 for i = 1:sizeNazionale
     nazionale_data(i) = datetime(nazionale(i).data,'Format','dd/MM','InputFormat','yyyy-MM-dd''T''HH:mm:ss');
 end
-nazionale_totcasi = vertcat(nazionale.totale_attualmente_positivi);
-nazionale_nuoviPos = vertcat(nazionale.nuovi_attualmente_positivi);
+nazionale_totcasi = vertcat(nazionale.totale_positivi);
+nazionale_nuoviPos = vertcat(nazionale.variazione_totale_positivi);
 nazionale_totOspedalizzati = vertcat(nazionale.totale_ospedalizzati);
 nazionale_terapiaIntensiva = vertcat(nazionale.terapia_intensiva);
 nazionale_dimessiGuariti = vertcat(nazionale.dimessi_guariti);
@@ -70,7 +70,7 @@ saveas(fig2,'./Grafici/GioNazionale.png');
 
 % ======== CASI REGIONALI=========
 
-regioni = ["Valle d'Aosta","Piemonte","Liguria","Lombardia","Veneto","Friuli Venezia Giulia","Emilia Romagna","Marche","Toscana","Umbria","Abruzzo","Molise","Lazio","Campania","Basilicata","Puglia","Calabria","Sicilia","Sardegna"];
+regioni = ["Valle d'Aosta","Piemonte","Liguria","Lombardia","Veneto","Friuli Venezia Giulia","Emilia-Romagna","Marche","Toscana","Umbria","Abruzzo","Molise","Lazio","Campania","Basilicata","Puglia","Calabria","Sicilia","Sardegna"];
 dim = size(regioni);
 dim = dim(2);
 
@@ -88,8 +88,8 @@ for i = 1:dim
     for i = 1:sizeRegione
         regione_data(i) = datetime(regione(i).data,'Format','dd/MM','InputFormat','yyyy-MM-dd''T''HH:mm:ss');
     end
-    regione_totcasi = vertcat(regione.totale_casi);
-    regione_nuoviPos = vertcat(regione.nuovi_attualmente_positivi);
+    regione_totcasi = vertcat(regione.totale_positivi);
+    regione_nuoviPos = vertcat(regione.nuovi_positivi);
     regione_totOspedalizzati = vertcat(regione.totale_ospedalizzati);
     regione_terapiaIntensiva = vertcat(regione.terapia_intensiva);
     regione_dimessiGuariti = vertcat(regione.dimessi_guariti);
